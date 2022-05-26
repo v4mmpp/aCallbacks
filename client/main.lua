@@ -13,8 +13,9 @@ end
 
 ---@public
 ---@param name string
----@param eventVoid function
 ---@param playerId number
+---@param eventVoid function
+---@param params any
 ---@return table | nil
 function aCallbacks.registerNetEvent(name, playerId, eventVoid, params)
     local registeredState = aCallbacks.events[name] ~= nil;
