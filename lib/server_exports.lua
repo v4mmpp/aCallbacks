@@ -1,0 +1,1 @@
+exports('registerCallback', aCallbacks.registerCallback);

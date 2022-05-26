@@ -1,0 +1,3 @@
+Configuration = {
+    registerConsoleOutput = true
+}

@@ -1,0 +1,1 @@
+exports('triggerCallback', aCallbacks.triggerCallback);
