@@ -8,7 +8,7 @@ You can easily get data from server-side, for exemple get an/more information(s)
 → __Server-Side__
 ```lua
 -- The commented parameters are those we added in the on the client-side.
-exports['aCallback']:registerCallback('getSecretKey', function(source, callback, --[[booleanValue, secondKey]])
+exports['aCallbacks']:registerCallback('getSecretKey', function(source, callback, --[[booleanValue, secondKey]])
     local secretKey = 'secretkey!';
     callback(secretKey);
 end);
@@ -16,7 +16,7 @@ end);
   
 → __Client-Side__ 
 ```lua
-exports['aCallback']:triggerCallback('getSecretKey', function(secretKey)
+exports['aCallbacks']:triggerCallback('getSecretKey', function(secretKey)
     print('This is the secret key: ' .. secretKey);
 
     -- You can also add parameters after callback function.
