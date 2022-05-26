@@ -23,7 +23,8 @@ exports['aCallback']:triggerCallback('getSecretKey', function(secretKey)
 end, --[[true, 'secondKey']]);
 ```  
 
-→ __( Result on client-side )__  
+→ __( Result on client-side )__ 
+   
 ![preview](https://cdn.discordapp.com/attachments/854756500034945075/979444098354278420/unknown.png)
 
 #
