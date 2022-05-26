@@ -42,17 +42,10 @@ function aCallbacks.registerCallback(name, void)
         if (not playerId) then
             return Utilities.log(('^3Warning^7, player-id of callback: (^3%s^7) is NULL.'):format(name));
         end
-
-        local cbData = {
-            id = playerId,
-            values = {  },
-        };
         
-        newCallback.void(cbData.id, function(...)
-            cbData.id = playerId;
-            cbData.values = { ... };
-            
-            TriggerClientEvent(eventName, playerId, table.unpack(cbData.values));
+        newCallback.void(playerId, function(...)
+            local args = { ... };
+            TriggerClientEvent(eventName, playerId, table.unpack(args));
         end, table.unpack(params));
     end);
 
